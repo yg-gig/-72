@@ -4,8 +4,8 @@ import webbrowser
 
 from telebot import types
 
-bot = telebot.TeleBot("7807995355:AAFG45z2nVkWlbM4TJvOji9zA9EoYwLqHfc")
-api = '0147b31b0eb679eb71587fb9696979f9'
+bot = telebot.TeleBot("")
+api = ''
 @bot.message_handler(commands=['site'])
 def site(message):
     webbrowser.open('https://www.ozon.ru')
@@ -76,3 +76,4 @@ def call_mes(callback):
     if callback.data == 'edit':
         bot.edit_message_text('зачееееееем',callback.message.chat.id, callback.message.message_id)
 bot.polling(non_stop=True)
+
