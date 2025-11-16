@@ -1,8 +1,8 @@
 import telebot
 import requests
 import json
-bot = telebot.TeleBot("7690542661:AAEoGUVEzrYktzL6EwL6ZTe2_wXAmCr_HWs")
-api = '0147b31b0eb679eb71587fb9696979f9'
+bot = telebot.TeleBot("")
+api = ''
 
 @bot.message_handler(commands=['start'])
 def gor(message):
@@ -24,4 +24,5 @@ def get_text(message):
             bot.send_message(message.from_user.id, "cloudy")
     else:
         bot.send_message(message.from_user.id, "город указон неверно")
+
 bot.polling(non_stop=True, interval=0)
